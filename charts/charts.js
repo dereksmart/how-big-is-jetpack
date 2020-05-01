@@ -242,6 +242,14 @@ jQuery( document ).ready( function ( $ ) {
 			if ( versionNum < from || versionNum > to ) {
 				return;
 			}
+			
+			if ( ! release.SUM ) {
+				// Skip releases without proper SUM property
+				// Sometimes this property is missing due to bad data
+				// And breaks the whole page.
+				return;
+			}
+			
 			labels.push( versionNum );
 			filteredData.push( release );
 		} );
