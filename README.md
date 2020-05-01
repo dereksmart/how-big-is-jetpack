@@ -1,4 +1,7 @@
 # how-big-is-jetpack
 How big is Jetpack?
 
-Get started with `php bin/build-json.php`
+# Running the tool
+
+1. Install `cloc` - `brew install cloc`
+2. `php bin/build-json.php prod`
